@@ -1,0 +1,1 @@
+# 12_An_Easier_Way_to_Prompt
