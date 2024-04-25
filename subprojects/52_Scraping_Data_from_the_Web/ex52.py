@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from urllib import request
 import os
 
-ttb_url = "https://web.archive.org/web/20230906095156/https://www.ttb.gov/beer/statistics"
+ttb_url = "https://en.wikipedia.org/wiki/Super_Mario_64"
 print(ttb_url)
 
 if not os.path.exists("ttb_stats.json"):
@@ -15,7 +15,7 @@ else:
         body = f.read()
 
 # change this to lxml instead of html5lib if you can't use it
-soup = BeautifulSoup(body, "lxml")
+soup = BeautifulSoup(body, "html5lib")
 print(soup.title)
 
 
