@@ -59,3 +59,10 @@ average_passenger_per_car = passengers / cars_driven
 # Answer: ---
 
 ## Try running python3 from the Terminal as a calculator like you did before, and use variable names to do your calculations. Popular variable names are also i, x, and j.
+# Answer:
+# I wrote in terminal: 'python3', and then
+# >>> i = 4
+# >>> j = 3
+# >>> x = i + j
+# >>> print(x)
+# 7
