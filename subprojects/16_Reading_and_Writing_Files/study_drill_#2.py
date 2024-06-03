@@ -2,6 +2,8 @@
 ## Write a .py script similar to the last Exercises 14 that uses read (Exercise 15) and argv 
 ## (Exercise 13) to read the file you just created. Be sure you run this in Terminal/PowerShell instead of Jupyter.
 
+# Answer:
+
 # Command for running the program:
 # python3 study_drill_#2.py "This is a first line" "This is a second line" "This is a third line"
 
