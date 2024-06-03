@@ -26,7 +26,7 @@ print(f"Opening the file...")
 
 target = open(filename, 'w')
 print(f"Truncating the file. Goodbye!")
-target.truncate()
+# target.truncate() - this line is not required, because we are passing 'w' argument
 
 print(f"Now I'm going to ask you for three lines.")
 
