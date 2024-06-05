@@ -1,0 +1,2 @@
+# Final Challenge
+# Your final challenge is to write out the Python code that writes out the same song lyric from Exercise 23. Again, take it slow and try to do it in your head before seeing whether you get it right. If you get it wrong, take the time to understand why you got it wrong. For comparison, I wrote out the lyrics in my head in one shot and didn't get it wrong. I am also way more experienced than you are, so you will probably make some mistakes and that is alright.
