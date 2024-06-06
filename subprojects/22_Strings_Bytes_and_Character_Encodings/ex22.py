@@ -21,3 +21,8 @@ main(languages, input_encoding, error)
 
 #python3 -m pydoc io.IOBase.seek
 #python3 -m pydoc str.strip
+
+# calling the script:
+#python ex22.py "utf-8" "strict"
+#python ex22.py "utf-8" "ignore"
+#python ex22.py "utf-8" "replace"
