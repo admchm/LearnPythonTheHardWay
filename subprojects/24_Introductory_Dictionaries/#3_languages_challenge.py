@@ -15,11 +15,28 @@ languages = [
 ];
 
 # 'Slow'
+print(languages[0]["speed"])
+
 # 'Alright'
+print(languages[1]["opinion"][0])
+
 # 'Dangerous'
+print(languages[3]["opinion"][1])
+
 # 'Fast'
+print(languages[4]["speed"])
+
 # 'Difficult'
+print(languages[4]["opinion"][1])
+
 # 'Fun'
+print(languages[4]["opinion"][0])
+
 # 'Annoying'
+print(languages[3]["opinion"][0])
+
 # 'Weird'
+print(languages[2]["opinion"][1])
+
 # 'Moderate'
+print(languages[1]["speed"])
