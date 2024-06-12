@@ -3,9 +3,9 @@
 ## find as many "equality operators" as you can. They should be like < or <=.
 
 # Answer: 
-# == (Equal to)
-# != (Not equal to)
-# > (Greater than)
-# < (Less than)
-# >= (Greater than or equal to)
-# <= (Less than or equal to)
+# ==
+# !=
+# >
+# <
+# >=
+# <=
