@@ -36,19 +36,16 @@ for number in the_count:
 ''')
 
 # output: 
-#   0           0 RESUME                   0
+# 0 LOAD_NAME     0 (the_count) # get the count list
+#  2 GET_ITER                    # start iteration
+#  4 FOR_ITER      6 (to 18)     # for-loop jump to 18
+#  6 STORE_NAME    1 (number)    # create number variable
 
-#   2           2 LOAD_NAME                0 (the_count)
-#               4 GET_ITER
-#         >>    6 FOR_ITER                10 (to 30)
-#              10 STORE_NAME               1 (number)
+#  8 LOAD_NAME     2 (print)     # load print()
+# 10 LOAD_NAME     1 (number)    # load number
+# 12 CALL_FUNCTION 1             # call print()
+# 14 POP_TOP                     # clean stack
+# 16 JUMP_ABSOLUTE 2 (to 4)      # jump back to FOR_ITER at 4
 
-#   3          12 PUSH_NULL
-#              14 LOAD_NAME                2 (print)
-#              16 LOAD_NAME                1 (number)
-#              18 CALL                     1
-#              26 POP_TOP
-#              28 JUMP_BACKWARD           12 (to 6)
-
-#   2     >>   30 END_FOR
-#              32 RETURN_CONST             0 (None)
+# 18 LOAD_CONST    0 (None)      # jump here when FOR_ITER done
+# 20 RETURN_VALUE
