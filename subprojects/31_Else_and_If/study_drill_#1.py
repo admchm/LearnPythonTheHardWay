@@ -1,4 +1,4 @@
 ## Study Drill #1: 
-## 
+## Try to guess what elif and else are doing.
 
-# Answer: 
+# Answer: They are providing alternative paths for the base condition
