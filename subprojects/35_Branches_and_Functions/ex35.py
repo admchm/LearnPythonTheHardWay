@@ -25,8 +25,6 @@ def bear_room():
     while True:
         choice = input('> ')
         
-        # print(choice)
-        
         if choice == "take honey":
             dead("The bear looks at you then slaps your face off.")
         elif choice == "taunt bear" and not bear_moved:
