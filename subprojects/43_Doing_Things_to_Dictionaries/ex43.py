@@ -56,6 +56,8 @@ for i in range(0,4):
     green_sm()
 
 # Step 4: A Person Constructor
+print("\nPerson constructor section:")
+
 def Person_new(name, age, eyes):
     person = {
         "name": name,
