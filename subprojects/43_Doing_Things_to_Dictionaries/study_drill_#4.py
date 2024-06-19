@@ -1,8 +1,8 @@
 ## Study Drill #4: 
 ## Add a job attribute to person and give different jobs different hit 
-# points, damage, and dialogue. For example, a "boxer" would have more 
-# HP and damage than a person with the job "baby." Python has way better 
-# tools for this same problem, but for this code it is a fun challenge.
+## points, damage, and dialogue. For example, a "boxer" would have more 
+## HP and damage than a person with the job "baby." Python has way better 
+## tools for this same problem, but for this code it is a fun challenge.
 
 # Answer:
 
@@ -59,7 +59,8 @@ def Person_new(name, age, eyes, job):
         "name": name,
         "age": age,
         "eyes": eyes,
-        "hit_points": random.randint(0, 100),
+        "hit_points": job["hit_points"], # should use values from the job object directly
+        "damage": job["damage"],         # should use values from the job object directly
         "job": job,
         "is_alive": True
     }
@@ -67,17 +68,14 @@ def Person_new(name, age, eyes, job):
     def talk():
         job = person["job"]
         
-        #print(f"I am {person['name']} - {job["job"]}. {job["dialogue"]}")
-        print(f"I am {person['name']} - {person[job["job"]]}. {job["dialogue"]}")
+        print(f"I am {person['name']} - {job["job"]}. {job["dialogue"]}")
     
     person["talk"] = talk
         
     def hit(hitted_by, target):
-        
-            
-         target["hit_points"] -= hitted_by[job["hit_points"]]
+        target["hit_points"] -= hitted_by["damage"]
 
-         print(f"{hitted_by["name"]} hit {target["name"]} for {hit_value} HP. Currently he has {target["hit_points"]} HPs left.") # 
+        print(f"{hitted_by["name"]} hit {target["name"]} for {hitted_by["damage"]} HP. Currently he has {target["hit_points"]} HPs left.") # 
         
     person["hit"] = hit
     
@@ -89,15 +87,4 @@ mark["talk"]()
 adam = Person_new("Adam", 33, "green", set_job("Ranger"))
 adam["talk"]()
 
-#print(selected_job["dialogue"])
-
-#mark["talk"]("I'm shouting right now!")
-#mark[set_job("Nomad")]
-#mark["talk"]("I'm shouting right now!")
-
-#selected_job = set_job("Ranger")
-
-
-#print(f"{mark["name"]}\'s HP = {mark["hit_points"]} ")
-
-#adam["hit"](adam, mark)
+adam["hit"](adam, mark)
