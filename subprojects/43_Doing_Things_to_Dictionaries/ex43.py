@@ -66,7 +66,7 @@ print("Florida's abbreviation is: ", states["Florida"])
 print("-" * 10)
 
 # print("Michigan has: ", cities["MI"])
-print("Michigan has: ", cities[states["Michigan"]]) # is it correct?
+print("Michigan has: ", cities[states["Michigan"]])
 print("Florida has: ", cities[states["Florida"]])
 
 # print every state abbreviation
