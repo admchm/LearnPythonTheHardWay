@@ -1,3 +1,5 @@
+# In Python 3 you do not need to add the (object) after the name of 
+# the class, but the Python community believes in "explicit is better than implicit"
 class Animal(object):
     pass
 
