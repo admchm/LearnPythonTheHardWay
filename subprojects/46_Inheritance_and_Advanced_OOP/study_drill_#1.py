@@ -1,5 +1,5 @@
 ## Study Drill #1: 
-## 
+## Research why Python added this strange object class and what that means.
 
 # Answer: 
 
