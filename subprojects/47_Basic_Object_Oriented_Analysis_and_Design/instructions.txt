@@ -1,0 +1,127 @@
+# The text comes from Zed Shaw's course. I thought I would post it 
+# here because it can be a great reference while creating future projects:
+
+# I'm going to describe a process to use when you want to build something
+# using Python, specifically with object-oriented programming (OOP). 
+# The process is as follows:
+
+# 1. Write or draw about the problem.
+# 2. Extract key concepts from 1 and research them.
+# 3. Create a class hierarchy and object map for the concepts.
+# 4. Code the classes and a test to run them.
+# 5. Repeat and refine.
+
+# I now have enough information to extract some of the nouns and analyze
+# their class hierarchy. First I make a list of all the nouns:
+
+# - Alien
+# - Player
+# - Ship
+# - Maze
+# - Room
+# - Scene
+# - Gothon
+# - Escape Pod
+# - Planet
+# - Map
+# - Engine
+# - Death
+# - Central Corridor
+# - Laser Weapon Armory
+# - The Bridge
+
+# I would also possibly go through all the verbs and see if they are 
+# anything that might be good function names, but I'll skip that for now.
+
+# After all of that thought process I start to make a class hierarchy that 
+# looks like this in my text editor:
+
+# * Map
+# * Engine
+# * Scene
+#   * Death
+#   * Central Corridor
+#   * Laser Weapon Armory
+#   * The Bridge
+#   * Escape Pod
+
+# I would then go through and figure out what actions are needed on each
+# thing based on verbs in the description.
+# * Map
+#   - next_scene
+#   - opening_scene
+# * Engine
+#   - play
+# * Scene
+#   - enter
+#   * Death
+#   * Central Corridor
+#   * Laser Weapon Armory
+#   * The Bridge
+#   * Escape Pod
+
+# Notice how I just put -enter under Scene since I know that all the 
+# scenes under it will inherit it and have to override it later.
+
+# first implementation:
+
+class Scene(object):
+
+    def enter(self):
+        pass
+
+
+class Engine(object):
+
+    def __init__(self, scene_map):
+        pass
+
+    def play(self):
+        pass
+
+class Death(Scene):
+
+    def enter(self):
+        pass
+
+class CentralCorridor(Scene):
+
+    def enter(self):
+        pass
+
+class LaserWeaponArmory(Scene):
+
+    def enter(self):
+        pass
+
+class TheBridge(Scene):
+
+    def enter(self):
+        pass
+
+class EscapePod(Scene):
+
+    def enter(self):
+        pass
+
+
+class Map(object):
+
+    def __init__(self, start_scene):
+        pass
+
+    def next_scene(self, scene_name):
+        pass
+
+    def opening_scene(self):
+        pass
+
+
+a_map = Map('central_corridor')
+a_game = Engine(a_map)
+a_game.play()
+
+# The last step in my little process isn't so much a step as it is 
+# a while-loop. You don't ever do this as a one-pass operation. 
+# Instead you go back over the whole process again and refine it 
+# based on information you've learned from later steps.
