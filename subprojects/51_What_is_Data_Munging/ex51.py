@@ -92,7 +92,12 @@ def calculate_actual_sales_stocks(stocks_ond_hand):
     stocks_prior_year_current_month = stocks_on_hand[1].replace(',', '')
     
     return Decimal(stocks_current_month) - Decimal(stocks_prior_year_current_month)
-    
+
+# filenames that could be used for testing:
+# "Statistical_Report_Beer_October_2021.pdf"
+# "Statistical_Report_Beer_November_2021.pdf"
+# "Statistical_Report_Beer_December_2021_revised.pdf"
+
 file_name = "Statistical_Report_Beer_October_2021.pdf"
 file = open(file_name, "rb")
 

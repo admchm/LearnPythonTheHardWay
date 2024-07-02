@@ -24,9 +24,3 @@
 # - Stocks on Hand End of Month for Current Month, Prior Year Current Month
 # - Calculate the difference between Production and Stock on Hand 
 #   End-of-Month to determine the actual sales that month.
-
-# Steps to implement
-# Create some kind of class for pdftotext to parse the pdf file
-# Create another class for required data
-# Call method from first class to get the data
-# Fill the data an object from the second class
