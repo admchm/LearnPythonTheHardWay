@@ -14,6 +14,11 @@ def get_reporting_period(lines):
     for line in lines:
         if line.startswith("Reporting Period"):
             return line
+        
+def get_report_date(lines):
+    for line in lines:
+        if line.startswith("Report Date"):
+            return line
     
 file_name = "Statistical_Report_Beer_October_2021.pdf"
 file = open(file_name, "rb")
@@ -24,6 +29,9 @@ lines = "".join(pdf).split("\n")
 
 reporting_period = get_reporting_period(lines)
 print(reporting_period)
+
+report_date = get_report_date(lines)
+print(report_date)
 
 # i = 0
 # for line in lines:
