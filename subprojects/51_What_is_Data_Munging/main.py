@@ -1,22 +1,23 @@
-# I will call required functions here
+# https://github.com/jalan/pdftotext - instructions
 
-# sample
-# import modules I need
 import pdftotext
-import sys
 
-# open the pdf
-infile = open(sys.argv[1], "rb")
+file_name = "Statistical_Report_Beer_October_2021.pdf"
+file = open(file_name, "rb")
 
-# convert it to text
-pdf = pdftotext.PDF(infile)
+pdf = pdftotext.PDF(file)
 
 lines = "".join(pdf).split("\n")
 
-# find Reporting Period
+i = 0
 for line in lines:
-    if line.startswith("Reporting Period"):
-        # print it
-        print(line)
-    else:
-        print(line)
+    i += 1
+    print(f"#{i}: {line}")
+
+# find Reporting Period
+# for line in lines:
+#     if line.startswith("Reporting Period"):
+#         # print it
+#         print(line)
+#     else:
+#         print(line)
