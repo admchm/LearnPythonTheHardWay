@@ -19,6 +19,10 @@ def get_reporting_period(lines):
         
 def get_report_date(lines):
     for line in lines:
+    
+        if line.startswith("REVISED"):
+            line = line[8:]
+        
         if line.startswith("Report Date"):
             return line
         
@@ -121,3 +125,12 @@ print(diff_prod_and_stock_on_hand_curr_month(production, stocks_on_hand))
 print(diff_prod_and_stock_on_hand_prior_year(production, stocks_on_hand))
 print(f"# - End-of-Month to determine the actual sales that month:")
 print(calculate_actual_sales_stocks(stocks_on_hand))
+
+# DEBUGGING
+# - Report Date: None
+# - Production for Current Month, Prior Year, Cumulative to Date ('14,603,993', '13,283,437', '10,970,415', '3,531,601')
+# - Stocks on Hand End of Month for Current Month, Prior Year Current Month: ('10,947,220', '11,850,641')
+# - Calculate the difference between Production and Stock on Hand:
+# 3656773
+# 1432796
+# # - End-of-Month to determine the actual sales that month: -903421
