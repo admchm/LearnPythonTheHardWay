@@ -100,9 +100,7 @@ def calculate_actual_sales_stocks(stocks_ond_hand):
 # filenames that could be used for testing:
 # "Statistical_Report_Beer_October_2021.pdf"
 # "Statistical_Report_Beer_November_2021.pdf"
-# "Statistical_Report_Beer_December_2021_revised.pdf" # TODO: report date in this case is not working
-                                                      # TODO: production values are not correct
-                                                      # TODO: difference between production and stock on hand are wrong for this file
+# "Statistical_Report_Beer_December_2021_revised.pdf"
 
 file_name = "Statistical_Report_Beer_December_2021_revised.pdf"
 file = open(file_name, "rb")
@@ -125,12 +123,3 @@ print(diff_prod_and_stock_on_hand_curr_month(production, stocks_on_hand))
 print(diff_prod_and_stock_on_hand_prior_year(production, stocks_on_hand))
 print(f"# - End-of-Month to determine the actual sales that month:")
 print(calculate_actual_sales_stocks(stocks_on_hand))
-
-# DEBUGGING
-# - Report Date: None
-# - Production for Current Month, Prior Year, Cumulative to Date ('14,603,993', '13,283,437', '10,970,415', '3,531,601')
-# - Stocks on Hand End of Month for Current Month, Prior Year Current Month: ('10,947,220', '11,850,641')
-# - Calculate the difference between Production and Stock on Hand:
-# 3656773
-# 1432796
-# # - End-of-Month to determine the actual sales that month: -903421
