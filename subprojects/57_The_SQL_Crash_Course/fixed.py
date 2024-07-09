@@ -2,7 +2,7 @@ import csv
 from pathlib import Path
 
 input_file = "eurofxref-hist.csv"
-output_file = Path("eurofxref-hist-fixed.csv")
+output_file = Path("fixed.csv")
 
 if not output_file.exists():
     output_file.touch()
