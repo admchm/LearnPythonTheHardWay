@@ -453,13 +453,25 @@
 # approving the changes:
 # COMMIT TRANSACTION
 
+# Math, Aggregates, and GROUP BY:
+# SELECT date, USD from euro GROUP BY date;
 
-# Math, Aggregates, and GROUP BY
-#SELECT date, USD from euro GROUP BY date;
-
+# it doesn't seem to work, so the next example will be correct:
 # SELECT count(date),
 #     date, avg(USD),
 #     min(USD), max(USD)
 #   FROM euro
 #   GROUP BY
 #     date(date, "start of month");
+
+
+# correct example, rewritten:
+# AS - alias
+
+# SELECT count(date) AS count_dates,
+#        date(date, 'start of month') AS month_start,
+#        avg(USD) AS avg_usd,
+#        min(USD) AS min_usd,
+#        max(USD) AS max_usd
+# FROM euro
+# GROUP BY date(date, 'start of month');
