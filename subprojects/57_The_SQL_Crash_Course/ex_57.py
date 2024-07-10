@@ -1,5 +1,6 @@
 # commands:
 
+# Loading a csv data file into sqlite3
 # sqlite3 euro.sqlite3
 
 # sqlite> .import --csv "fixed.csv" euro
@@ -7,7 +8,7 @@
 # 6331
 # sqlite>
 
-
+# 
 # sqlite> .schema euro
 
 
