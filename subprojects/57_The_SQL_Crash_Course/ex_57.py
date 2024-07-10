@@ -438,19 +438,21 @@
 #     AND USD=1.0808;
 
 
-#DELETE and Transactions
+# DELETE and Transactions:
 # DELETE FROM euro WHERE USD=1.1215;
 
+# https://www.sqlite.org/lang_transaction.html
 
 # SELECT count(*) FROM euro;
-
 # BEGIN TRANSACTION;
-
 # DELETE FROM euro;
-
 # ROLLBACK TRANSACTION;
 
 # SELECT count(*) FROM euro;
+
+# approving the changes:
+# COMMIT TRANSACTION
+
 
 # Math, Aggregates, and GROUP BY
 #SELECT date, USD from euro GROUP BY date;
