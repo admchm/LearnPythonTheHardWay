@@ -1,6 +1,6 @@
 # commands:
 
-# Loading a csv data file into sqlite3
+# Loading a csv data file into sqlite3:
 # sqlite3 euro.sqlite3
 
 # sqlite> .import --csv "fixed.csv" euro
@@ -8,14 +8,14 @@
 # 6331
 # sqlite>
 
-# 
+# Printing available rows:
 # sqlite> .schema euro
 
+# Backing Up Your Database:
+# sqlite3 euro.sqlite3 ".backup euro_backup.sqlite3"
+# for calling this command the sqlite3 shouldn't be running
 
-# Back Up Your Database
-#sqlite3 euro.sqlite3 ".backup euro_backup.sqlite3"
-
-# Recovering db
+# Recovering db:
 #cp euro_backup.sqlite3 euro.sqlite3
 
 
