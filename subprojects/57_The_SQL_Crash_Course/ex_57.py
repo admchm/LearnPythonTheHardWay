@@ -475,3 +475,7 @@
 #        max(USD) AS max_usd
 # FROM euro
 # GROUP BY date(date, 'start of month');
+
+# ORDER BY:
+# SELECT date, PLN FROM euro
+# ORDER BY PLN;
