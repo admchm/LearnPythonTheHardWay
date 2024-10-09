@@ -47,3 +47,7 @@
 # 184
 
 # Querying with Joins
+# SELECT count(*) FROM rate, currency
+#   WHERE rate.currency_id=currency.id
+#   AND currency.currency='USD'
+#   AND date(rate.date) > date('2023-01-01');
